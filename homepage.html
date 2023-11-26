@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="slider.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="login.css">
+  <!--Font Poppins-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'body': ['Poppins']
+          }
+          
+        } 
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gradient-to-b from-[#2a3438] to-[#9a7c50] ">
+
+  <!--Navbar-->
+  <header>
+    <img class="logo" src="Home/header img/Logo.png">
+    <nav class="navbar">
+      <a href="homepage.html">Home</a>
+      <a href="x">Shop</a>
+      <a href="about.html" target="_blank"> About Us</a>
+      <button class="joinBtn">Login</button>
+    </nav>
+  </header>
+  
+  <!--Container image slider-->
+  <div class="flex justify-center items-center mt-[260px]">
+    <!--Image slider start-->
+    <div class="slider">
+      <div class="slides">
+        <!--Radio button start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--Radio button ends-->
+        <!--Slides image start-->
+        <div class="slide first">
+          <img src="Home/slider img/slider3.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="Home/slider img/slider2.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="Home/slider img/slider3.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="Home/slider img/slider2.png" alt="">
+        </div>
+        <!--slide image ends-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!--akutomatic navigation ends-->
+        <!--manual button start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--manual button ends-->
+      </div>
+      
+    </div>
+    <!--Image slider ends-->
+  </div>
+  <!--Container image slider end-->
+  <!-- javascript atomatic-->
+  <script type="text/javascript">
+    var counter = 0;
+    setInterval(function(){
+      counter = counter + 1;
+      document.getElementById('radio'+ counter).checked = true;
+      if(counter > 4){
+        counter = 0;
+      }
+    },5000);
+  </script>
+
+  <!--Best seller -->
+  <div class="place-content-center mt-[270px]">
+    <div class=" border-[3px] border-[#2a3438] mx-[200px]">
+      <!--Title-->
+      <div class="py-[9px] mt-10 flex justify-center">
+        <p class="text-[50px] font-body text-white">
+          Popular Product</p>
+      </div>
+      <div class="flex justify-center">
+        <div class=" border-t-[3px] w-64 h-8 "></div>
+      </div>
+      <div class="flex justify-center">
+        <p class="text-white text-[20px] font-body"> Your jurney for experiencing the best of the tastes starts here</p>
+      </div>
+      <!--Product-->
+      <div class="flex justify-between mt-[80px] mx-[290px] ">
+        <div>
+          <img class="w-[320px]" src="Home/best seller img/Jawir.png" alt="best seller 1">
+        </div>
+        <div>
+          <img class="w-[320px]" src="Home/best seller img/Icikiwir.png" alt="best seller 2">
+        </div>
+      </div>
+      <!--Button-->
+      <div class="flex justify-center mt-7 mb-7">
+        <button class="bg-[#d0b576] px-14 py-4 rounded-[50px] text-white transition-colors ease-in-out font-semibold hover:bg-[#2a3438]">SEE MORE</button>
+      </div>
+    </div>
+    
+  </div>
+  <!--best seller ends-->
+
+  <!--About Us-->
+    <!--Image left-->
+  <div class="flex justify-between mt-64 mx-[200px] gap-x-[50px]">
+    <div class=" ">
+      <img class="w-[465px] h-[800px] object-cover " src="Home/About us/About1.jpg" alt="">
+    </div>
+    <!--Image left end-->
+    <!--middle text-->
+    <div class="w-[465px] bg-gradient-to-br from-[#2a3438] to-[#39210e]">
+      <div class="grid mt-32 ml-7">
+        <div>
+          <p class="text-white text-left text-[40px] font-body">About </p>
+          <p class="text-white text-left text-[40px] font-body">BeanMasters</p>
+          <p class="text-white text-left text-[40px] font-body">Coffee Roastery</p>
+        </div>
+        <div class="w-[110px] border-2 border-[#d0b576] mt-3"></div>
+        <div class="mt-6">
+          <p class="text-white font-body text-left ">Find out what BeanMasters</p>
+          <p class="text-white font-body text-left "> Coffe Roastery is actually about</p>
+        </div>
+        <div class="mt-9">
+          <button 
+            class="border-[3px] border-[#d0b576] px-[20px] py-[5px] text-white font-body transition-colors ease-in-out hover:bg-[#d0b576] hover:text-stone-800" 
+            href="about.html">
+            FIND MORE
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--middle text end-->
+    <!--Image right-->
+    <div class="">
+      <img class="w-[465px] h-[800px] object-cover" src="Home/About us/About2.jpg" alt="">
+    </div>
+    <!--Image right end-->
+  </div>
+  <!--About us end-->
+
+  <!--Footer-->
+  <div class=" mt-20 bg-center bg-[length:1920px] h-[600px] grid" style="background-image: url('background.jpg');">
+    
+    <!--text footer-->
+    <div class="flex justify-between items-center mt-[100px] mx-[300px] border-[3px] border-r-transparent border-l-transparent border-t-transparent border-b-[#d0b576] ">
+      <!--Bagian kiri-->
+      <div class="flex justify-between items-center">
+        <!--Logo-->
+        <div class="">
+          <img class="w-[200px] mr-20" src="Home/header img/Logo.png">
+        </div>
+        <!--Menu-->
+        <div class="text-white font-body grid ml-20">
+          <p class="mb-4" href="">Menu</p>
+          <a class="my-2 hover:underline" href="homepage.html">Home</a>
+          <a class="my-2 hover:underline" href="">Shop</a>
+          <a class="my-2 hover:underline" href="about.html">About</a>
+          <a class="my-2 hover:underline" href="">Login</a>
+        </div>
+      </div>
+      <!--bagian kiri end-->
+      <!--bagian kanan-->
+      <div class="flex justify-between items-baseline">
+        <!--Shop-->
+        <div class="text-white font-body grid mr-20">
+          <a class="mb-4" href="">Shop</a>
+          <a class="my-2" href="">Jawir Roasted Beans</a>
+          <a class="my-2" href="">Icikiwir Roasted Beans</a>
+          <a class="my-2" href="">Nigir Ballsack</a>
+          <a class="my-2" href="">Au Ah Beans</a>
+        </div>
+        <!--Adress-->
+        <div class="text-white font-body grid ml-20">
+          <a class="mb-4" href="">Adress</a>
+          <a class="my-2 w-64 hover:underline" href="https://maps.app.goo.gl/XZmw3myNh4J9x1Sv5">Jl. Grafika 420, Sleman, Yogyakarta, Indonesia</a>
+        </div>
+      </div>
+    </div>
+    <!--Copyright-->
+      <div class="flex justify-center items-center">
+        <p class="text-white font-body">Copyright 2023 PT. BeanMaster All rights reserved</p>
+      </div>
+    </div>
+
+  </div>
+  <!--footer end-->
+  <!--Login Form-->
+  <div class="fixed flex h-screen z-10 w-screen justify-center items-center">
+    <div class="login-popup  text-white">
+      <div class="login-box">
+
+          <h1 class="flex justify-center">Login</h1>
+        <form class="form-template login-form mt-10">
+          <div class="email mb-1">
+            <span>Mail</span>
+            <input type="email" placeholder="Enter email address" required>
+
+          </div>
+          <div class="password mb-1">
+            <span>Pass</span>
+            <input type="password" placeholder="Enter password" required>
+
+          </div>
+          <div class="popup-footer">
+            <button class="submit-btn mb-1"type="submit">Login</button>
+            <p class="mb-1">Sign up <a class="text-bold" href="register">now!</a></p>
+          </div>
+        </form>
+
+        
+      </div>
+
+      <div class="register-box">
+        <h1 class="flex justify-center">Register</h1>
+      <form class="form-template login-form mt-10">
+        <div class="email mb-1">
+          <span>Mail</span>
+          <input type="email" placeholder="Enter email address" required>
+
+        </div>
+        <div class="password mb-1">
+          <span>Pass</span>
+          <input type="password" placeholder="Enter password" required>
+
+        </div>
+
+        <div class="password-retype mb-1">
+          <span>Pass</span>
+          <input type="password" placeholder="Repeat password" required>
+
+        </div>
+        <div class="popup-footer">
+          <button class="submit-btn mb-1"type="submit">Login</button>
+          <p class="mb-1">Sign up <a class="text-bold" href="register">now!</a></p>
+        </div>
+      </form>
+
+      
+    </div>
+    </div>
+  </div>
+  
+  <script src="login-screen.js"></script>
+
+</body>
+</html>
